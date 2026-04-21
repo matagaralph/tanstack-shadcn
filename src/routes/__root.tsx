@@ -21,6 +21,14 @@ export const Route = createRootRoute({
         rel: 'stylesheet',
         href: appCss,
       },
+      {
+        rel: 'preconnect',
+        href: 'https://rsms.me',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://rsms.me/inter/inter.css',
+      },
     ],
   }),
   shellComponent: RootDocument,
@@ -32,7 +40,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className='antialiased font-sans'>
         {children}
         <Scripts />
       </body>
